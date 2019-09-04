@@ -1,0 +1,38 @@
+{
+  "name": "caf-ima-starter",
+  "version": "1.0.0",
+  "description": "Rough pass on a CAF receiver using IMA",
+  "main": "index.js",
+  "scripts": {
+    "start": "rollup --config rollup.config.js && aws s3 sync ./build/ s3://dev-cast.foxnews.com/",
+    "test": "test",
+    "firebase": "firebase"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandonrisell/caf-ima-starter.git"
+  },
+  "author": "Brandon Risell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonrisell/caf-ima-starter/issues"
+  },
+  "homepage": "https://github.com/brandonrisell/caf-ima-starter#readme",
+  "dependencies": {
+    "haunted": "^4.5.2",
+    "rollup": "^1.20.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-multi-input": "^1.0.2",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "firebase-tools": "^7.2.4",
+    "prettier": "^1.18.2"
+  }
+}
